@@ -7,7 +7,6 @@ from utils.pose_mapping import return_pose_map
 import os
 from utils.monodepth import load_model, depth_map_from_frame
 
-
 dpt_model, transform, device = load_model()
 
 
@@ -30,22 +29,9 @@ def main():
     stop_feed = st.checkbox("Stop Camera Feed")
     
     
-    try:
-        cap = cv2.VideoCapture(0) ##TEMP
-        ret, frame = cap.read()
-        if frame is None:
-            raise Exception
-    except:
-        print("Camera not found")
-        os.exit(0)
-
     while not stop_feed:
         
-        ret, frame = cap.read()  ##TEMP
-        if frame is None:
-            print("Could not read frame.")
-            continue
-        
+        frame = cv2.imread("./sample_images/473.png")  
         
         # depth_map = cv2.imread("./output.jpg")
         depth_map = np.copy(frame)

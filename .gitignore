@@ -1,9 +1,7 @@
 # ignore image and deploymentEnv files
-deploymentEnv/
-models/
 utils/weights/dpt_hybrid_nyu-2ce69ec7.pt
-*.jpg
-*.png
+models/yolov8m.pt
+models/best.pt
 
 # Byte-compiled / optimized / DLL files
 __pycache__/

@@ -6,12 +6,12 @@ print(os.getcwd())
 try :
     from utils.check_overlap import check_overlap_for_2
 except:
-    from check_overlap import check_overlap_for_2
+    from utils.check_overlap import check_overlap_for_2
 
 pose_model = YOLO("./models/best.pt")
 # pose_model = YOLO("./models/yolov8m-pose.pt")
+# model = YOLO("./models/yolov8m.pt")
 
-model = YOLO("./models/yolov8m.pt")
 
 
 def check_fall(keypoints_data, bbox):
